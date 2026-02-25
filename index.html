@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Hall | Technical Program Manager</title>
+    <title>Joshua Hall | Technical Program Manager - Available for Contract Engagements</title>
     <style>
         * {
             margin: 0;
@@ -19,7 +19,7 @@
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -27,21 +27,48 @@
         header {
             background: linear-gradient(135deg, #1F4E78 0%, #2E75B6 100%);
             color: white;
-            padding: 60px 0;
+            padding: 50px 0 40px 0;
             text-align: center;
         }
         
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.8em;
+            margin-bottom: 15px;
             font-weight: 600;
         }
         
-        header p {
-            font-size: 1.2em;
+        header .subtitle {
+            font-size: 1.3em;
             opacity: 0.95;
-            max-width: 700px;
-            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            font-size: 1.1em;
+            margin-top: 20px;
+            opacity: 0.95;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+            transition: border-bottom 0.3s;
+        }
+        
+        .contact-info a:hover {
+            border-bottom: 1px solid white;
+        }
+        
+        .availability-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 25px;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-size: 1em;
+            border: 2px solid rgba(255,255,255,0.4);
         }
         
         section {
@@ -49,44 +76,101 @@
         }
         
         h2 {
-            font-size: 2em;
-            margin-bottom: 30px;
+            font-size: 2.2em;
+            margin-bottom: 20px;
             color: #1F4E78;
             border-bottom: 3px solid #2E75B6;
             padding-bottom: 10px;
         }
         
-        .value-prop {
+        .intro-section {
             background: #f8f9fa;
+            padding: 50px 0;
+        }
+        
+        .value-prop {
+            background: white;
             padding: 40px;
             border-radius: 8px;
-            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid #2E75B6;
         }
         
         .value-prop p {
-            font-size: 1.1em;
+            font-size: 1.15em;
             line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .value-prop ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+        
+        .value-prop li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.05em;
+        }
+        
+        .value-prop li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2E75B6;
+            font-weight: bold;
+        }
+        
+        .case-studies-section {
+            background: white;
         }
         
         .case-studies {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
         }
         
         .case-study {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid #2E75B6;
+            background: #f8f9fa;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            border-top: 4px solid #2E75B6;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .case-study:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .case-study-header {
+            margin-bottom: 20px;
         }
         
         .case-study h3 {
             color: #1F4E78;
+            margin-bottom: 8px;
+            font-size: 1.4em;
+        }
+        
+        .case-study .company-type {
+            color: #666;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+        
+        .case-study-content {
+            margin: 20px 0;
+        }
+        
+        .case-study-content p {
             margin-bottom: 15px;
-            font-size: 1.3em;
+            line-height: 1.7;
         }
         
         .case-study ul {
@@ -95,9 +179,10 @@
         }
         
         .case-study li {
-            padding: 8px 0;
-            padding-left: 20px;
+            padding: 10px 0;
+            padding-left: 25px;
             position: relative;
+            line-height: 1.6;
         }
         
         .case-study li:before {
@@ -106,71 +191,158 @@
             left: 0;
             color: #2E75B6;
             font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .impact-metrics {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2E75B6;
+            display: block;
+        }
+        
+        .metric-label {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .specializations-section {
+            background: #f8f9fa;
         }
         
         .specializations {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
             margin-top: 30px;
         }
         
         .spec-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 6px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .spec-item:hover {
+            transform: translateY(-3px);
         }
         
         .spec-item h3 {
             color: #1F4E78;
-            font-size: 1.1em;
-            margin-bottom: 10px;
+            font-size: 1.2em;
+            margin-bottom: 12px;
+        }
+        
+        .spec-item p {
+            color: #555;
+            line-height: 1.6;
         }
         
         .contact-section {
             background: #1F4E78;
             color: white;
             text-align: center;
-            padding: 60px 0;
+            padding: 70px 0;
         }
         
         .contact-section h2 {
             color: white;
             border-bottom: 3px solid white;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
         }
         
-        .contact-section a {
+        .contact-section p {
+            font-size: 1.15em;
+            margin: 20px 0;
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-section .engagement-types {
+            margin: 30px 0;
+            font-size: 1.05em;
+        }
+        
+        .cta-button {
             color: white;
             text-decoration: none;
             font-size: 1.2em;
-            padding: 15px 40px;
+            padding: 15px 45px;
             background: #2E75B6;
             border-radius: 5px;
             display: inline-block;
             margin-top: 20px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.3s;
+            border: 2px solid transparent;
         }
         
-        .contact-section a:hover {
+        .cta-button:hover {
             background: #3D8FD1;
+            transform: scale(1.05);
+            border: 2px solid white;
+        }
+        
+        .contact-methods {
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+        
+        .contact-methods a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
         }
         
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.8em;
+                font-size: 2em;
             }
             
-            header p {
-                font-size: 1em;
+            header .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .contact-info {
+                font-size: 0.95em;
+            }
+            
+            .contact-info a {
+                display: block;
+                margin: 10px 0;
             }
             
             h2 {
-                font-size: 1.5em;
+                font-size: 1.7em;
             }
             
             .case-studies {
                 grid-template-columns: 1fr;
+            }
+            
+            .impact-metrics {
+                flex-direction: column;
+                gap: 15px;
             }
         }
     </style>
@@ -179,79 +351,156 @@
     <header>
         <div class="container">
             <h1>Joshua Hall</h1>
-            <p>Technical Program Manager | Healthcare Data Migrations & Enterprise SaaS Transformations</p>
+            <div class="subtitle">Technical Program Manager</div>
+            <div class="subtitle" style="font-size: 1.1em;">Healthcare Data Migrations | Enterprise SaaS Transformations | Cloud Implementations</div>
+            
+            <div class="contact-info">
+                <a href="mailto:joshuahall8100@gmail.com">joshuahall8100@gmail.com</a>
+                <a href="tel:8167853109">816.785.3109</a>
+            </div>
+            
+            <div class="availability-badge">
+                ✓ Available for Contract Engagements
+            </div>
         </div>
     </header>
 
-    <section>
+    <section class="intro-section">
         <div class="container">
             <div class="value-prop">
                 <p>
-                    I help healthcare organizations and enterprise companies execute complex data migrations, 
-                    SaaS platform consolidations, and cloud transformations in highly regulated environments. 
-                    With 12+ years of experience across Fortune 500 tech companies and federal healthcare IT, 
-                    I deliver zero-downtime implementations that reduce costs and improve operational efficiency.
+                    <strong>Experienced Technical Program Manager specializing in complex data migrations, SaaS platform implementations, and cloud transformations for healthcare organizations and enterprise companies operating in highly regulated environments.</strong>
                 </p>
+                <p>
+                    With 12+ years leading technical programs across Fortune 500 technology companies, federal healthcare IT, and financial services, I deliver zero-downtime implementations that reduce operational costs and accelerate digital transformation initiatives.
+                </p>
+                <p><strong>Typical Engagement Types:</strong></p>
+                <ul>
+                    <li>6-12 month contract roles as embedded Technical Program Manager</li>
+                    <li>Healthcare EMR/EHR data migration program leadership</li>
+                    <li>Enterprise SaaS consolidation and optimization projects</li>
+                    <li>Cloud migration execution (AWS) for regulated industries</li>
+                    <li>Document management system modernization initiatives</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section style="background: #f8f9fa;">
+    <section class="case-studies-section">
         <div class="container">
-            <h2>Proven Results</h2>
+            <h2>Project Highlights</h2>
             <div class="case-studies">
                 <div class="case-study">
-                    <h3>Federal Healthcare Migration</h3>
-                    <ul>
-                        <li>30+ hospital EMR migrations</li>
-                        <li>Zero downtime achieved</li>
-                        <li>100% VA/DoD compliance</li>
-                        <li>6-month delivery timeline</li>
-                    </ul>
+                    <div class="case-study-header">
+                        <h3>Federal Healthcare Migration Program</h3>
+                        <div class="company-type">Oracle/Cerner • VA/DoD Healthcare Facilities</div>
+                    </div>
+                    <div class="case-study-content">
+                        <p>Led enterprise-scale EMR imaging system migrations for Department of Veterans Affairs and Department of Defense healthcare facilities.</p>
+                        <ul>
+                            <li>Migrated 30+ hospitals from on-premises to AWS cloud infrastructure in 6 months</li>
+                            <li>Achieved zero downtime across all facilities during cutover</li>
+                            <li>Maintained 100% compliance with VA/DoD security requirements and HIPAA regulations</li>
+                            <li>Coordinated cross-functional teams including federal compliance, infrastructure, and application support</li>
+                            <li>Managed scope and timeline for 50+ multi-site facility rollouts</li>
+                        </ul>
+                    </div>
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">30+</span>
+                            <span class="metric-label">Hospitals Migrated</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">0</span>
+                            <span class="metric-label">Downtime Events</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">100%</span>
+                            <span class="metric-label">Compliance Rate</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="case-study">
-                    <h3>Enterprise SaaS Consolidation</h3>
-                    <ul>
-                        <li>$1.2M cost savings delivered</li>
-                        <li>Fortune 500 tech company</li>
-                        <li>Platform optimization</li>
-                        <li>70% engagement increase</li>
-                    </ul>
+                    <div class="case-study-header">
+                        <h3>Enterprise SaaS Consolidation</h3>
+                        <div class="company-type">Fortune 500 Technology Company</div>
+                    </div>
+                    <div class="case-study-content">
+                        <p>Directed platform consolidation initiative for global workforce communications serving 100,000+ employees.</p>
+                        <ul>
+                            <li>Consolidated two legacy communication platforms into unified SaaS solution</li>
+                            <li>Delivered $1.2M in cost savings over three-year period</li>
+                            <li>Served as Product Owner defining roadmap and feature prioritization</li>
+                            <li>Coordinated stakeholder alignment across Legal, IT, Communications, and Security teams</li>
+                            <li>Drove 70% increase in platform engagement through user enablement programs</li>
+                        </ul>
+                    </div>
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">$1.2M</span>
+                            <span class="metric-label">Cost Savings</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">70%</span>
+                            <span class="metric-label">Engagement Increase</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">100K+</span>
+                            <span class="metric-label">Users Supported</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="case-study">
-                    <h3>Public Sector Cloud Migration</h3>
-                    <ul>
-                        <li>Document management modernization</li>
-                        <li>Multi-phase cloud transition</li>
-                        <li>Security & compliance focus</li>
-                        <li>Ongoing strategic leadership</li>
-                    </ul>
+                    <div class="case-study-header">
+                        <h3>Document Management Modernization</h3>
+                        <div class="company-type">Public Sector Organization • Current</div>
+                    </div>
+                    <div class="case-study-content">
+                        <p>Leading program management for large-scale document repository transformation and cloud migration.</p>
+                        <ul>
+                            <li>Managing multi-phase migration from on-premises to secure cloud environment</li>
+                            <li>Designing centralized repository architecture and governance framework</li>
+                            <li>Defining information architecture, metadata standards, and access controls</li>
+                            <li>Coordinating cross-functional delivery across IT, security, compliance, and vendor teams</li>
+                            <li>Ensuring compliance with public sector security requirements throughout transition</li>
+                        </ul>
+                    </div>
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">Multi-Phase</span>
+                            <span class="metric-label">Cloud Migration</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">Ongoing</span>
+                            <span class="metric-label">Program Leadership</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="specializations-section">
         <div class="container">
-            <h2>Specializations</h2>
+            <h2>Core Specializations</h2>
             <div class="specializations">
                 <div class="spec-item">
                     <h3>Healthcare IT</h3>
-                    <p>EMR/EHR migrations, HIPAA compliance, federal VA/DoD implementations</p>
+                    <p>EMR/EHR system migrations (Cerner/Oracle), HIPAA compliance, federal VA/DoD implementations, imaging system deployments</p>
                 </div>
                 <div class="spec-item">
-                    <h3>SaaS Optimization</h3>
-                    <p>Platform consolidation, cost reduction, user adoption strategies</p>
+                    <h3>Enterprise SaaS</h3>
+                    <p>Platform consolidation, cost optimization, vendor management, user adoption strategies, product ownership</p>
                 </div>
                 <div class="spec-item">
                     <h3>Cloud Migrations</h3>
-                    <p>AWS infrastructure, zero-downtime transitions, secure deployments</p>
+                    <p>AWS infrastructure transitions, zero-downtime deployments, secure cloud architecture for regulated environments</p>
                 </div>
                 <div class="spec-item">
                     <h3>Regulated Industries</h3>
-                    <p>Federal government, healthcare, financial services compliance</p>
+                    <p>Federal government compliance, healthcare privacy regulations, financial services security standards</p>
                 </div>
             </div>
         </div>
@@ -259,12 +508,22 @@
 
     <section class="contact-section">
         <div class="container">
-            <h2>Available for Contract Engagements</h2>
-            <p style="margin: 20px 0; font-size: 1.1em;">
-                Looking for an experienced technical program manager for your next data migration, 
-                SaaS implementation, or cloud transformation project?
+            <h2>Let's Discuss Your Project</h2>
+            <p>
+                I'm currently accepting contract engagements for technical program management roles. 
+                Typical projects include data migrations, SaaS implementations, cloud transformations, 
+                and digital modernization initiatives in healthcare, government, and enterprise environments.
             </p>
-            <a href="mailto:joshuahall8100@gmail.com">Get In Touch</a>
+            <div class="engagement-types">
+                <strong>Available for:</strong> 6-12 month contract roles | Remote or hybrid arrangements | Strategic consulting engagements
+            </div>
+            
+            <a href="mailto:joshuahall8100@gmail.com" class="cta-button">Get In Touch</a>
+            
+            <div class="contact-methods">
+                <a href="mailto:joshuahall8100@gmail.com">joshuahall8100@gmail.com</a> | 
+                <a href="tel:8167853109">816.785.3109</a>
+            </div>
         </div>
     </section>
 </body>
